@@ -1,0 +1,26 @@
+type Student{
+    _id: String,
+    FirstName: String,
+    LastName: String,
+    Standard: Int,
+    FatherName: String,
+    MotherName: String
+}
+
+input StudentInput{
+    _id:String
+    FirstName: String,
+    LastName: String,
+    Standard: Int,
+    FatherName: String,
+    MotherName: String
+}
+
+type Query{
+    getAllStudents:[Student],
+    getStudentById(id:String):Student
+}
+
+type Mutation{
+    create(student:StudentInput):Student
+}
